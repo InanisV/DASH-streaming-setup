@@ -1,5 +1,5 @@
-# DASH-streaming-setup
-Setup used for the video streaming experiments in the MMSys'20 Paper "Comparing Fixed and Variable Segment Durations for Adaptive Video Streaming – A Holistic Analysis". 
+# DASH/HLS-streaming-setup
+This is forked from the setup used for the video streaming experiments in the MMSys'20 Paper "Comparing Fixed and Variable Segment Durations for Adaptive Video Streaming – A Holistic Analysis". 
 ## Overview 
 The setup consists of three virtual machines. 
    * The __server__, which hosts the video content 
@@ -8,21 +8,13 @@ The setup consists of three virtual machines.
    
 ![](images/setup.JPG)
 
-## Requirements
-The setup has been tested for the following operating systems and Vagrant versions: 
-   * Windows 10 - Vagrant 2.2.6
-   * Debian 9.12 (stretch) - Vagrant 2.0.2
-   * Arch Linux - Vagrant 2.2.7-3
-   
-
-In general, the setup should be runnable on any current platform having Vagrant installed. However, due to the virtualization, it cannot be run in a virtual envrionment (e.g. on a server VM). The machine should have at least 8GB of RAM.
-
-
-
 ## Using the setup for video streaming measurements 
 __Step 1__ Open a terminal and navigate into the subfolder `vagrant_files`. Run the following command to provision all VMs (this will take a few minutes).
-```
+```bash
 vagrant up
+
+# with Vmware Fusion on Mac
+vagrant up --provider vmware_fusion
 ```
 All VMs are ready as soon as you can see the following output: 
 ```
